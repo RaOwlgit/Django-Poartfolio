@@ -1,0 +1,208 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking index_style.css file  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/syllabus_style.css' %}">
+
+    <!-- Linking Remixicon and Boxicons for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Linking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@500;0,600&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+     
+    <!-- Home Page -->
+    <title>Poartfolio - Rahul Chandrakar - Syllabus</title>
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+     <header>
+        <!-- First column -->
+        <a href="{% url 'home' %}" class="logo">
+         <i id="logo-icon" class="bx bx-graduation"></i>
+         <span class="primary-logo">Ra</span>
+         <span class="secondary-logo">Owl</span>
+       </a>
+        <!-- Second Column -->
+        <ul class="navbar">
+           <li><a href="home.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="project.html">Projects</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <!-- Third Column -->
+        <div class="main">
+           <a href="contact_us.html" class="user"><i class="ri-wechat-fill"></i>Contact Us</a>
+           <dir><i class="ri-sun-fill" id="light" data-tooltip="Light Theme"></i></dir>
+           <div><i class="ri-moon-clear-fill" id="dark" data-tooltip="Dark Theme"></i></div>
+           <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+     </header>
+
+     <!-- Middle Content -->
+     <div class="syllabus-container">
+		<!-- Semester 1 -->
+		<div class="semester-card">
+			<div class="semester-header" onclick="toggleSemester('semester1-subjects')">
+				<h3>1<sup>st</sup> Semester</h3>
+			</div>
+			<ul id="semester1-subjects" class="subject-list">
+				<li>
+					<a href="../assets/Syllabus/1_Sem_Syllabus.pdf" target="_blank"><h4>First Semester</h4></a>
+					<a href="../assets/Syllabus/1_Sem_Syllabus.pdf" class="download-btn" target="_blank" download>Download</a>
+			</ul>
+		</div>
+	
+		<!-- Semester 2 -->
+        <div class="semester-card">
+			<div class="semester-header" onclick="toggleSemester('semester2-subjects')">
+				<h3>2<sup>nd</sup> Semester</h3>
+			</div>
+			<ul id="semester2-subjects" class="subject-list">
+				<li>
+					<a href="../assets/Syllabus/2_Sem_Syllabus.pdf" target="_blank"><h4>Second Semester</h4></a>
+					<a href="../assets/Syllabus/2_Sem_Syllabus.pdf" class="download-btn" target="_blank" download>Download</a>
+			</ul>
+		</div>
+
+        <!-- Semester 3 -->
+        <div class="semester-card">
+			<div class="semester-header" onclick="toggleSemester('semester3-subjects')">
+				<h3>3<sup>rd</sup> Semester</h3>
+			</div>
+			<ul id="semester3-subjects" class="subject-list">
+				<li>
+					<a href="../assets/Syllabus/3_Sem_Syllabus_AIML .pdf" target="_blank"><h4>Third Semester</h4></a>
+					<a href="../assets/Syllabus/3_Sem_Syllabus_AIML .pdf" class="download-btn" target="_blank" download>Download</a>
+			</ul>
+		</div>
+
+        <!-- Semester 4 -->
+        <div class="semester-card">
+			<div class="semester-header" onclick="toggleSemester('semester4-subjects')">
+				<h3>4<sup>th</sup> Semester</h3>
+			</div>
+			<ul id="semester4-subjects" class="subject-list">
+				<li>
+					<a href="../assets/Syllabus/4_Sem_Syllabus_AIML .pdf" target="_blank"><h4>Fourth Semester</h4></a>
+					<a href="../assets/Syllabus/4_Sem_Syllabus_AIML .pdf" class="download-btn" target="_blank" download>Download</a>
+			</ul>
+		</div>
+
+        <!-- Semester 5 -->
+        <div class="semester-card">
+			<div class="semester-header" onclick="toggleSemester('semester5-subjects')">
+				<h3>5<sup>th</sup> Semester</h3>
+			</div>
+			<ul id="semester5-subjects" class="subject-list">
+				<li>
+					<a href="../assets/Syllabus/5_Sem_Syllabus_AIML .pdf" target="_blank"><h4>Fifth Semester</h4></a>
+					<a href="../assets/Syllabus/5_Sem_Syllabus_AIML .pdf" class="download-btn" target="_blank" download>Download</a>
+			</ul>
+		</div>
+
+        <!-- Semester 6 -->
+        <div class="semester-card">
+			<div class="semester-header" onclick="toggleSemester('semester6-subjects')">
+				<h3>6<sup>th</sup> Semester</h3>
+			</div>
+			<ul id="semester6-subjects" class="subject-list">
+				<li>
+					<a href="../assets/Syllabus/6_Sem_Syllabus_AIML .pdf" target="_blank"><h4>Sixth Semester</h4></a>
+					<a href="../assets/Syllabus/6_Sem_Syllabus_AIML .pdf" class="download-btn" target="_blank" download>Download</a>
+			</ul>
+		</div>
+
+        <!-- Semester 7 -->
+        <div class="semester-card">
+			<div class="semester-header" onclick="toggleSemester('semester7-subjects')">
+				<h3>7<sup>th</sup> Semester</h3>
+			</div>
+			<ul id="semester7-subjects" class="subject-list">
+				<li>
+					<a href="../assets/Syllabus/7_Sem_Syllabus_AIML .pdf" target="_blank"><h4>Seventh Semester</h4></a>
+					<a href="../assets/Syllabus/7_Sem_Syllabus_AIML .pdf" class="download-btn" target="_blank" download>Download</a>
+			</ul>
+		</div>
+
+        <!-- Semester 8 -->
+        <div class="semester-card">
+			<div class="semester-header" onclick="toggleSemester('semester8-subjects')">
+				<h3>8<sup>th</sup> Semester</h3>
+			</div>
+			<ul id="semester8-subjects" class="subject-list">
+				<li>
+					<a href="../assets/Syllabus/8_Sem_Syllabus_AIML .pdf" target="_blank"><h4>Eighth Semester</h4></a>
+					<a href="../assets/Syllabus/8_Sem_Syllabus_AIML .pdf" class="download-btn" target="_blank" download>Download</a>
+			</ul>
+		</div>
+
+
+	</div>
+    
+
+     <!-- Footer section of Webpage -->
+     <section class="footer">
+        <div class="footer-content">
+            <span class="footer-primary-logo">Ra</span>
+            <span class="footer-secondary-logo">Owl</span>
+            <p>"A place where I showcase my journey in design and development."</p>
+            <div class="footer-icons">
+                <a href="https://github.com/RaOwlgit" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/rahul-chandrakar-11361a2ba/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="#" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+        </div>
+    
+        <div class="footer-content">
+            <h4>Quick Links</h4>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+        </div>
+    
+        <div class="footer-content">
+            <h4>Projects</h4>
+            <li><a href="project_blender.html">Blender</a></li>
+            <li><a href="project_flutter.html">Flutter</a></li>
+            <li><a href="project-django.html">Django</a></li>
+            <li><a href="project_android_studio.html">Android Studio</a></li>
+            <li><a href="project_arduino.html">Arduino</a></li>
+            <li><a href="project_unity.html">Unity</a></li>
+        </div>
+
+        <div class="footer-content">
+            <h4>Study Material</h4>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="practical.html">Practical</a></li>
+            <li><a href="question_bank.html">Question Bank</a></li>
+            <li><a href="command_bank.html">Terminal Command</a></li>
+
+
+        </div>
+
+
+        <!-- Copyright Section -->
+        <div class="footer-copyright">
+            &copy; 2024 RaOwl. All rights reserved.
+        </div>
+    </section>
+
+    <!-- Linking index_script.js -->
+     <script type="text/javascript" src="../js/syllabus_script.js"></script>
+    
+</body>
+</html>

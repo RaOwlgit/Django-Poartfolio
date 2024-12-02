@@ -1,0 +1,192 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking index_style.css file  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gallery_style.css' %}">
+
+    <!-- Linking Remixicon and Boxicons for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Linking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@500;0,600&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+     
+    <!-- Home Page -->
+    <title>Poartfolio - Rahul Chandrakar - Gallery</title>
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+     <header>
+        <!-- First column -->
+        <a href="{% url 'home' %}" class="logo">
+         <i id="logo-icon" class="bx bx-graduation"></i>
+         <span class="primary-logo">Ra</span>
+         <span class="secondary-logo">Owl</span>
+       </a>
+        <!-- Second Column -->
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}#home" class="nav-link">Home</a></li>
+            <li><a href="{% url 'home' %}#about" class="nav-link">About</a></li>
+            <li><a href="{% url 'home' %}#project" class="nav-link">Projects</a></li>
+            <li><a href="{% url 'gallery' %}" class="nav-link active">Gallery</a></li>
+        </ul>
+           
+        <!-- Third Column -->
+        <div class="main">
+           <a href="{% url 'contact_us' %}" class="user"><i class="ri-wechat-fill"></i>Contact Us</a>
+           <dir><i class="ri-sun-fill" id="light" data-tooltip="Light Theme"></i></dir>
+           <div><i class="ri-moon-clear-fill" id="dark" data-tooltip="Dark Theme"></i></div>
+           <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+     </header>
+
+     <div class="container">
+        <div class="heading">
+            <h3>Photo <span>Gallery</span></h3>
+        </div>
+
+        <div class="box">
+
+
+            <div class="collection">
+                <img src="{% static 'assets/Photos/1.jpeg' %}" alt="Photo 1">
+                <div class="overlay">
+                    <h4>20-August-2024</h4>
+                    <p>"Lost in the golden glow, chasing dreams as vast as the horizon."</p>
+                </div>
+            </div>
+    
+            <div class="collection">
+                <img src="{% static 'assets/Photos/2.jpeg' %}" alt="Photo 2">
+                <div class="overlay">
+                    <h4>29-August-2024</h4>
+                    <p>"As the sun sets, it whispers a promise of new beginnings in the quiet embrace of dusk."</p>
+                </div>
+            </div>
+
+            <div class="collection">
+                <img src="{% static 'assets/Photos/3.jpeg' %}" alt="Photo 3">
+                <div class="overlay">
+                    <h4>15-September-2024</h4>
+                    <p>"Leaning against the car, he strikes a pose that radiates confidence and passion, as if declaring to the world that he holds the courage to turn dreams into reality."</p>
+                </div>
+            </div>
+
+
+            <div class="collection">
+                <img src="{% static 'assets/Photos/5.jpeg' %}" alt="Photo 4">
+                <div class="overlay">
+                    <h4>1-October-2024</h4>
+                    <p>"Beneath the vast expanse of the blue clouded sky, dreams soar freely, carried by the whispers of the wind and the promise of endless possibilities."</p>
+                </div>
+            </div>
+
+            <div class="collection">
+                <img src="{% static 'assets/Photos/6.jpeg' %}" alt="Photo 5">
+                <div class="overlay">
+                    <h4>5-October-2024</h4>
+                    <p>"An empty road winds gently through the embrace of towering trees, whispering secrets of solitude and the promise of undiscovered journeys ahead."</p>
+                </div>
+            </div>
+
+            <div class="collection">
+                <img src="{% static 'assets/Photos/7.jpeg' %}" alt="Photo 6">
+                <div class="overlay">
+                    <h4>10-October-2024</h4>
+                    <p>"Under the vast sky, coconut trees sway gracefully alongside a symphony of other trees, their leaves whispering tales of nature’s timeless harmony."</p>
+                </div>
+            </div>
+
+            <div class="collection">
+                <img src="{% static 'assets/Photos/8.jpeg' %}" alt="Photo 7">
+                <div class="overlay">
+                    <h4>12-October-2024</h4>
+                    <p>"My friend strikes a perfect pose, wearing sunglasses that give him an air of mystery and cool confidence."</p>
+                </div>
+            </div>
+
+            <div class="collection">
+                <img src="{% static 'assets/Photos/9.jpeg' %}" alt="Photo 8">
+                <div class="overlay">
+                    <h4>12-October-2024</h4>
+                    <p>"With sunglasses on, my friend effortlessly strikes a pose, his style radiating confidence and charisma."</p>
+                </div>
+            </div>
+
+            <div class="collection">
+                <img src="{% static 'assets/Photos/10.jpeg' %}" alt="Photo 9">
+                <div class="overlay">
+                    <h4>5-October-2024</h4>
+                    <p>"An empty road winds gently through the embrace of towering trees, whispering secrets of solitude and the promise of undiscovered journeys ahead."</p>
+                </div>
+            </div>
+
+
+
+        </div>
+        </div>
+     </div>
+
+       <!-- Footer section of Webpage -->
+     <section class="footer">
+        <div class="footer-content">
+            <span class="footer-primary-logo">Ra</span>
+            <span class="footer-secondary-logo">Owl</span>
+            <p>"A place where I showcase my journey in design and development."</p>
+            <div class="footer-icons">
+                <a href="https://github.com/RaOwlgit" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/rahul-chandrakar-11361a2ba/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+        </div>
+    
+        <div class="footer-content">
+            <h4>Quick Links</h4>
+            <li><a href="{% url 'home' %}#home">Home</a></li>
+            <li><a href="{% url 'home' %}#about">About</a></li>
+            <li><a href="{% url 'home' %}#project">Projects</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+        </div>
+    
+        <div class="footer-content">
+            <h4>Projects</h4>
+            <li><a href="project_blender.html">Blender</a></li>
+            <li><a href="project_flutter.html">Flutter</a></li>
+            <li><a href="project_django.html">Django</a></li>
+            <li><a href="project_android_studio.html">Android Studio</a></li>
+            <li><a href="project_arduino.html">Arduino</a></li>
+            <li><a href="project_unity.html">Unity</a></li>
+
+        </div>
+
+        <div class="footer-content">
+            <h4>Study Material</h4>
+            <li><a href="{% url 'syllabus' %}">Syllabus</a></li>
+            <li><a href="practical.html">Practical</a></li>
+            <li><a href="question_bank.html">Question Bank</a></li>
+            <li><a href="{% url 'terminal_command' %}">Terminal Command</a></li>
+
+        </div>
+        <!-- Copyright Section -->
+        <div class="footer-copyright">
+            &copy; 2024 <span><a href="https://github.com/RaOwlgit" target="_blank">RaOwl</a></span>. All rights reserved.
+        </div>
+    </section>
+
+    <!-- Linking index_script.js -->
+     <script type="text/javascript" src="{% static 'js/home_script.js' %}"></script>
+    
+</body>
+</html>

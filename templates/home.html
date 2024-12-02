@@ -1,0 +1,385 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking index_style.css file  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home_style.css' %}">
+
+    <!-- Linking Remixicon and Boxicons for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Linking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@500;0,600&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bruno+Ace&family=Geist+Mono:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+     
+    <!-- Home Page -->
+    <title>Poartfolio - Rahul Chandrakar - Home</title>
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+     <header>
+        <!-- First column -->
+        <a href="{% url 'home' %}" class="logo">
+         <i id="logo-icon" class="bx bx-graduation"></i>
+         <span class="primary-logo">Ra</span>
+         <span class="secondary-logo">Owl</span>
+       </a>
+        <!-- Second Column -->
+        <ul class="navbar">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#project" class="nav-link">Projects</a></li>
+            <li><a href="{% url 'gallery' %}" class="nav-link">Gallery</a></li>
+        </ul>
+        <div class="main">
+            <a href="{% url 'contact_us' %}" class="user"><i class="ri-wechat-fill"></i>Contact Us</a>
+            <div><i class="ri-sun-fill" id="light" data-tooltip="Light Theme"></i></div>
+            <div><i class="ri-moon-clear-fill" id="dark" data-tooltip="Dark Theme"></i></div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>        
+     </header>
+     
+
+     <!-- Main Body Content -->
+     <main>
+        <!-- Text Content -->
+        <div class="text-container" id="home">
+            <h3>Hi, Myself</h3>
+            <h1>Rahul Chandrakar</h1>
+            <h3>
+                And I'm passionate about 
+                <span id="typewriter"></span>
+                <span class="cursor">|</span>
+            </h3>
+            <div class="social-media">
+                <a href="https://github.com/RaOwlgit" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rahul-chandrakar-11361a2ba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    
+        <!-- Image Content -->
+        <div class="image-container">
+            <img src="{% static 'assets/Photos/profile.png' %}" alt="Profile Picture" class="profile-image">
+        </div>
+
+               <!-- Main Card -->
+    <div class="main-card">
+
+        <div class="main-card-heading">Skill Progress</div>
+  
+        <!-- Inner Container for Small Cards -->
+        <div class="inner-container">
+  
+            <!-- Small Card 1 -->
+            <div class="small-card">
+                <div class="header">
+                    <img src="{% static 'assets/Logo/python.png' %}" alt="Python" class="logo">
+                    <span class="title">Python</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill-1">
+                            <div class="shine"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-box" id="message-box-1">0%</div>
+            </div>
+  
+            <!-- Small Card 2 -->
+            <div class="small-card">
+                <div class="header">
+                    <img src="{% static 'assets/Logo/c.png' %}" alt="C" class="logo">
+                    <span class="title">C</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill-2">
+                            <div class="shine"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-box" id="message-box-2">0%</div>
+            </div>
+  
+            <!-- Small Card 3 -->
+            <div class="small-card">
+                <div class="header">
+                    <img src="{% static 'assets/Logo/blender.png' %}" alt="Blender" class="logo">
+                    <span class="title">Blender</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill-3">
+                            <div class="shine"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-box" id="message-box-3">0%</div>
+            </div>
+  
+            <!-- Small Card 4 -->
+            <div class="small-card">
+              <div class="header">
+                  <img src="{% static 'assets/Logo/arduino.png' %}" alt="Arduino" class="logo">
+                  <span class="title">Arduino</span>
+              </div>
+              <div class="progress-container">
+                  <div class="progress-bar">
+                      <div class="progress-fill" id="progress-fill-4">
+                          <div class="shine"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="message-box" id="message-box-4">0%</div>
+          </div>
+  
+          <!-- Small Card 5 -->
+          <div class="small-card">
+            <div class="header">
+                <img src="{% static 'assets/Logo/flutter.png' %}" alt="Flutter" class="logo">
+                <span class="title">Flutter</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill-5">
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="message-box" id="message-box-5">0%</div>
+        </div>
+
+         <!-- Small Card 6 -->
+         <div class="small-card">
+            <div class="header">
+                <img src="{% static 'assets/Logo/android_studio.png' %}" alt="Android Studio" class="logo">
+                <span class="title">Android Studio</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill-6">
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="message-box" id="message-box-6">0%</div>
+        </div>
+        
+
+        </div>
+    </div>
+    </main>
+    
+
+    <!-- About Me Section  -->
+  
+    <div class="about-me-heading" id="about">
+        <h2>About Me</h2>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <div class="left-column">
+                <div class="card-photo">
+                    <div class="photo-box">
+                        <img src="{% static 'assets/Photos/small-profile.jpg' %}" alt="Profile Photo" />
+                    </div>
+                    <p class="name">Rahul Chandrakar,<br>Rungta College Bhilai, Durg</p>
+                </div>
+                                
+            </div>
+            <div class="right-column">
+                <p>Hi there,</p>
+                <p>
+                    My name is <span>Rahul Chandrakar</span>, and I'm currently diving headfirst
+                    into the world of technology as a third-semester B.Tech student at
+                    <span>Rungta College Of Engineering & Technology, Bhilai</span>. I'm thrilled to
+                    have you here on my website, a space I've created to share my ongoing
+                    journey in the fascinating realm of tech.
+                </p>
+                <p>
+                    Here, you'll find a collection of my projects and creative endeavors,
+                    constantly evolving as I delve deeper into new learning resources and
+                    content. My passion for various fields like
+                    <span>3D Modeling, Animation, App and Web development, Arduino, Game
+                    development, and Machine Learning</span> fuels my drive to create. You'll find
+                    several projects showcasing these interests, and as I continuously expand
+                    my skillset, this website will become a window into my technical
+                    achievements and the path I'm forging in the tech world.
+                </p>
+                <p>
+                    So, feel free to explore, learn, and get a taste of my experiences! This
+                    site is a work in progress, just like my journey, and I'm excited to have
+                    you join me for the ride.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+ <!-- Project Section  -->
+ <div class="project-heading" id="project">
+    <h2>Project Collection</h2>
+</div>
+<div class="wrapper">
+    <i id="left" class="fa-solid  fas fa-angle-left"></i>
+    <ul class="carousel">
+
+        <a href="project_blender.html" style="text-decoration: none; color: inherit;">
+            <li class="card">
+                <div class="img"><img src= "{% static 'assets/Logo/blender.png' %}" draggable="false"> </div>
+                <h2>Blender</h2>
+                <span>My Blender-crafted</span>
+                <span> 3D models</span>
+
+        </li>
+        </a>
+        
+        <a href="project_3js.html" style="text-decoration: none; color: inherit;">
+        <li class="card">
+            <div class="img"><img src= "{% static 'assets/Logo/3js.png' %}" draggable="false"> </div>
+            <h2>3JS</h2>
+            <span>My interactive 3D </span>
+            <span>creations in Three.js</span>
+
+        </li>
+        </a>
+
+        <a href="project_django.html" style="text-decoration: none; color: inherit;">
+        <li class="card">
+            <div class="img"><img src= "{% static 'assets/Logo/django.png' %}" draggable="false"> </div>
+            <h2>Django</h2>
+            <span>My web apps</span>
+            <span>powered by Django</span>
+
+        </li>
+        </a>
+
+
+
+        <a href="project_android_studio.html" style="text-decoration: none; color: inherit;">
+            <li class="card">
+                <div class="img"><img src= "{% static 'assets/Logo/android_studio.png' %}" draggable="false"> </div>
+                <h2>Android Studio</h2>
+                <span>My apps crafted</span>
+                <span>with Android Studio</span>
+
+        </li>
+        </a>
+
+        <a href="project-django.html" style="text-decoration: none; color: inherit;">
+            <li class="card">
+                <div class="img"><img src= "{% static 'assets/Logo/flutter.png' %}" draggable="false"> </div>
+                <h2>Flutter</h2>
+                <span>My mobile apps</span>
+                <span>built with Flutter</span>
+
+        </li>
+        </a>
+
+        <a href="project-django.html" style="text-decoration: none; color: inherit;">
+            <li class="card">
+                <div class="img"><img src= "{% static 'assets/Logo/arduino.png' %}" draggable="false"> </div>
+                <h2>Arduino</h2>
+                <span>My projects</span>
+                <span>powered by Arduino</span>
+
+        </li>
+        </a>
+
+        <a href="project-django.html" style="text-decoration: none; color: inherit;">
+            <li class="card">
+                <div class="img"><img src= "{% static 'assets/Logo/freecad.png' %}" draggable="false"> </div>
+                <h2>FreeCAD</h2>
+                <span>My designs crafted</span>
+                <span>in FreeCAD</span>
+
+        </li>
+        </a>
+
+        <a href="project-django.html" style="text-decoration: none; color: inherit;">
+            <li class="card">
+                <div class="img"><img src= "{% static 'assets/Logo/python.png' %}" draggable="false"> </div>
+                <h2>Python</h2>
+                <span>My solutions coded</span>
+                <span>in Python</span>
+        </li>
+        </a>
+
+        <a href="project-django.html" style="text-decoration: none; color: inherit;">
+            <li class="card">
+                <div class="img"><img src= "{% static 'assets/Logo/c.png' %}" draggable="false"> </div>
+                <h2>C</h2>
+                <span>My programs</span>
+                <span>developed in C</span>
+        </li>
+        </a>
+        
+    <i id="right" class="fa-solid fas fa-angle-right"></i>
+</div>
+
+
+     <!-- Footer section of Webpage -->
+     <section class="footer">
+        <div class="footer-content">
+            <span class="footer-primary-logo">Ra</span>
+            <span class="footer-secondary-logo">Owl</span>
+            <p>"A place where I showcase my journey in design and development."</p>
+            <div class="footer-icons">
+                <a href="https://github.com/RaOwlgit" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/rahul-chandrakar-11361a2ba/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+        </div>
+    
+        <div class="footer-content">
+            <h4>Quick Links</h4>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+        </div>
+    
+        <div class="footer-content">
+            <h4>Projects</h4>
+            <li><a href="project_blender.html">Blender</a></li>
+            <li><a href="project_flutter.html">Flutter</a></li>
+            <li><a href="project_django.html">Django</a></li>
+            <li><a href="project_android_studio.html">Android Studio</a></li>
+            <li><a href="project_arduino.html">Arduino</a></li>
+            <li><a href="project_unity.html">Unity</a></li>
+
+        </div>
+
+        <div class="footer-content">
+            <h4>Study Material</h4>
+            <li><a href="{% url 'syllabus' %}">Syllabus</a></li>
+            <li><a href="practical.html">Practical</a></li>
+            <li><a href="question_bank.html">Question Bank</a></li>
+            <li><a href="{% url 'terminal_command' %}">Terminal Command</a></li>
+
+        </div>
+        <!-- Copyright Section -->
+        <div class="footer-copyright">
+            &copy; 2024 <span><a href="https://github.com/RaOwlgit" target="_blank">RaOwl</a></span>. All rights reserved.
+        </div>
+    </section>
+
+    <!-- Linking index_script.js -->
+    <script type="text/javascript" src="{% static 'js/home_script.js' %}"></script>
+    
+</body>
+</html>
